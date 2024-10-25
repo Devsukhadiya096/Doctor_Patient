@@ -1,0 +1,312 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #007bff;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+header h1 {
+    font-size: 2em;
+    color: white;
+}
+
+header h1 span {
+    color: #28a745;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://via.placeholder.com/1200x400?text=Your+Health,+Our+Priority') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: #007bff;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #007bff;
+}
+
+/* Services Section */
+.services {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-item i {
+    font-size: 3em;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 1em;
+}
+
+/* Appointment Section */
+.appointments {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.appointments h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.appointments p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.appointments .btn-appointment {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.appointments .btn-appointment:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #007bff;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.service-image {
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+.banner {
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* Padding for the banner */
+}
+
+.banner-image {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 400px; /* Limit the maximum height */
+    object-fit: cover; /* Cover the area while preserving aspect ratio */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+.banner h2 {
+    margin: 0; /* Remove default margin */
+    font-size: 2rem; /* Adjust font size */
+}
+
+.banner p {
+    margin: 20px 0; /* Margin for spacing */
+}
+
+.banner .btn {
+    background-color: #007bff; /* Button background */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+}
+
+.banner .btn:hover {
+    background-color: #0056b3; /* Darker background on hover */
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Stack header items */
+        align-items: flex-start; /* Align to the left */
+        text-align: left; /* Left-align text */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: flex-start; /* Align items to the left */
+        display: none; /* Hide navigation items by default */
+    }
+
+    nav ul.active {
+        display: flex; /* Show navigation items when active */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Add margin between items */
+    }
+
+    .service-list {
+        flex-direction: column; /* Stack service items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .service-item {
+        width: 90%; /* Make service items take full width */
+        margin: 10px 0; /* Add vertical margin */
+    }
+
+    .banner-image {
+        max-height: 200px; /* Smaller max height for mobile */
+    }
+
+    .hero {
+        padding: 80px 10px; /* Adjust padding for hero section */
+    }
+
+    .hero h2 {
+        font-size: 2em; /* Smaller heading size */
+    }
+
+    .hero p {
+        font-size: 1em; /* Smaller paragraph size */
+    }
+
+    .hero .btn {
+        padding: 10px 20px; /* Smaller button padding */
+    }
+}
+
+@media (max-width: 425px) {
+    .header-container h1 {
+        font-size: 20px; /* Smaller title font size */
+    }
+
+    nav ul {
+        padding: 0; /* Remove padding from nav */
+    }
+
+    nav ul li a {
+        padding: 8px 16px; /* Smaller padding for nav links */
+    }
+
+    .banner h2 {
+        font-size: 1.5em; /* Smaller heading size */
+    }
+
+    .banner p {
+        font-size: 12px; /* Smaller paragraph size */
+    }
+
+    .service-image {
+        width: 70%; /* Smaller images on mobile */
+    }
+
+    footer p {
+        font-size: 12px; /* Smaller footer text */
+    }
+
+    /* Button adjustments */
+    .appointments .btn-appointment {
+        padding: 10px 20px; /* Smaller button padding */
+        font-size: 1em; /* Smaller font size */
+    }
+}
